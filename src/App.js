@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import $ from "jquery";
+import LandingPage from "./Components/LandingPage";
+import Demo from "./Components/Demo";
+import Documentation from "./Components/Documentation";
+// import { useColorMode, Button } from '@chakra-ui/core';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  // componentWillMount() {
+  //   $(".btn").on("click", function(event) {
+  //     if (this.hash !== "") {
+  //       event.preventDefault();
+
+  //       const hash = this.hash;
+
+  //       $("html, body").animate(
+  //         {
+  //           scrollTop: $(hash).offset().top
+  //         },
+  //         800
+  //       );
+  //     }
+  //   });
+  // }
+  render() {
+    return (
+      <div>
+        <LandingPage />
+        <Demo />
+        <Documentation />
+      </div>
+    );
+  }
 }
 
 export default App;
